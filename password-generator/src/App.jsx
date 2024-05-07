@@ -40,6 +40,10 @@ const passwordGenerator = useCallback (() => {
         <input type="checkbox" defaultChecked ={numberAllowed} onChange={(prev) => {setNumberAllowed(!prev)}}/>
         <label>Numbers</label>
       </div>
+      <div className="flex items-center gap-x-1">
+        <input type="checkbox" defaultChecked ={charAllowed} onChange={(prev) => {setCharAllowed(!prev)}}/>
+        <label>Numbers</label>
+      </div>
     </div>
    </div>
    </>
