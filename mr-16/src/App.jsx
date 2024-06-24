@@ -4,8 +4,8 @@ function App() {
   const [count, setCount] = useState(0);
   const [num, setNum] = useState(0);
 
-  const handleCount = () => {
-    setCount(count + num);
+  const handleCount = (x) => {
+    setCount(count + x);
   };
   const handleChange = (e) => {
     setNum(parseInt(e.target.value));
@@ -13,7 +13,13 @@ function App() {
   return (
     <>
       <h1>Counter App</h1>
-      <button>Count: {count}</button>
+      <button
+        onClick={() => {
+          handleCount(num);
+        }}
+      >
+        Count: {count}
+      </button>
       <input type="number" value={num} onChange={handleChange} />
     </>
   );
