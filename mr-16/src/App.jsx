@@ -1,9 +1,16 @@
-import React from 'react'
+import { useState } from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
+  const handleCount = () => {
+    setCount(count + 1);
+  };
   return (
-    <div>App</div>
-  )
+    <>
+      <h1>Counter App</h1>
+      <button>Count: {count}</button>
+    </>
+  );
 }
 
-export default App
+export default App;
